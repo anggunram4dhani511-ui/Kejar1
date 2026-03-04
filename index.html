@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOKOPEDIA - Daftar & Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .brand-name {
+            font-size: 35px;
+            font-weight: 800;
+            color: #28a745; 
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .main-container {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .illustration-side {
+            flex: 1.2;
+            text-align: center;
+        }
+
+        .illustration-side img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+        }
+
+        .form-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 
+                        0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
+        }
+
+        .login-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card-header h2 {
+            font-size: 24px;
+            color: #212121;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .card-header p {
+            color: #6D7588;
+            font-size: 14px;
+        }
+
+        .card-header p a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card-header p a:hover {
+            text-decoration: underline;
+            color: #218838;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #444;
+            text-transform: uppercase;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e5e7e9;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+
+        .input-group input:focus {
+            border-color: #28a745;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+            box-shadow: 0 8px 15px rgba(40, 167, 69, 0.2);
+        }
+
+        @media (max-width: 850px) {
+            .brand-name {
+                margin-bottom: 20px;
+            }
+            .main-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .illustration-side img {
+                max-width: 250px;
+            }
+            .login-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="brand-name">TOKOPEDIA</h1>
+
+    <div class="main-container">
+        <div class="illustration-side">
+            <img src="tokped.png" alt="Ilustrasi Tokopedia">
+        </div>
+
+        <div class="form-side">
+            <div class="login-card">
+                <div class="card-header">
+                    <h2>Daftar Sekarang</h2>
+                    <p>Sudah Punya Akun? <a href="#" id="showLogin">Masuk</a></p>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Masukkan Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit">LOGIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
